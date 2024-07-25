@@ -1,0 +1,17 @@
+body{
+	/* background-color: grey */
+}
+
+.titulo{
+	/* background-color: blue */
+}
+
+.contenedor{
+	/* background-color: #0095ff */
+}
+
+.labelAlta{
+	font-size: 15px;
+	color: blue;
+	font-weight: bold;
+}

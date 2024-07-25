@@ -1,0 +1,46 @@
+.menu{
+
+}
+
+.center{
+	margin: 0 auto;
+	width: 200px;
+}
+
+.cols{
+	float:left;
+	margin:0;
+}
+
+.col-4{
+	width:33%;
+}
+
+.static{
+	position: static; /* Esto no sería necesario por que viene por default */
+	left: 120px; /* Estos estilos no funcionan en static */
+}
+
+.relative{
+	position: relative;
+	left: 40px;
+	top: 30px;
+	border: solid 1px black;
+	width: 100%;
+}
+
+.absolute{
+	position: absolute;
+	right:10px;
+	top:20px;
+	width: auto;
+}	
+
+
+.fixed{
+	position: fixed;
+	bottom:0;
+	width: 200em;
+	background-color: green;
+}
+

@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<title>	TITULO </title>
+		
+		<!-- Esta es la forma de levantar archivos de CSS -->
+		<link rel="stylesheet" href="estilos.css">
+		
+	</head>
+	
+	<body>
+		<div id="titulo" class="titulo">
+			<h1>	Bienvenidos!	<br> Este es un ejemplo con JavaScript </h1>
+		</div>
+		<hr>
+		<div id="contendor" class="contenedor">
+				<div id="contenedorAlta">
+					<form id="formularioAlta" action="javascript:void(0);" role="form" id="alta" method="post" enctype="multipart/form-data">
+						<label class="labelAlta">	Nombre </label>
+						<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre"/>
+						<br>
+						<br>
+						<label class="labelAlta">	Apellido </label>
+						<input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese el apellido"/> 
+						<br>
+						<br>
+						<label class="labelAlta">	DNI </label>
+						<input type="text" class="form-control" id="dni" name="dni" placeholder="Ingrese el dni"/> 
+						<br>
+						<br>
+						<label class="labelAlta">	Sexo </label>
+						<br>
+						<input type="radio" name="sexo" value="masculino"> Masculino<br>
+						<input type="radio" name="sexo" value="femenino"> Femenino<br>
+						<br>
+						<br>
+						<label class="labelAlta">	Curso que quiero hacer: </label>
+						<br>
+						<select name="curso" id="curso">
+							<option value="php">PHP</option>
+							<option value="java">JAVA</option>
+							<option value="net">NET</option>
+							<option value="otro">Otro</option>
+						</select>
+						<br>
+						<br>
+						<label class="labelAlta">	Motivo del curso: </label>
+						<br>
+						<textarea name="motivo" id="motivo" rows="10" cols="50"></textarea>
+						<br>
+						<br>
+						<br>
+						<button type="submit" id="enviar" onClick="enviarDatos();"> Enviar </button>
+					</form>
+				</div>
+		</div>
+		
+		
+		<button type="button" id="ocultar" onClick="ocultarFormulario();"> Ocultar Formulario </button>
+		<br>
+		<br>
+		<button type="button" id="mostrar" onClick="mostrarFormulario();"> Mostrar Formulario </button>
+		
+	</body>
+	
+</html>
+
+<script type="text/javascript">
+
+	alert("Hola esta es un alerta creada con JavaScript, este cartel se muestra apenas se carga la pagina");
+	console.log("Este mensaje se crea despues del alerta");
+	
+	// Funcion para ocultar el formulario cuando se hace click en ocultar
+	function ocultarFormulario(){
+		document.getElementById('contenedorAlta').style.display = 'none';
+	}
+	
+	// Funcion para mostrar el formulario cuando se hace click en mostrar
+	function mostrarFormulario(){
+		document.getElementById('contenedorAlta').style.display = 'block';
+	}
+	
+	
+	// Funcion para enviar los datos
+	function enviarDatos(){
+		var nombre = document.getElementById('nombre').value;
+		console.log("El nombre ingresado es: " + nombre);
+		
+		var apellido = document.getElementById('apellido').value;
+		console.log("El apellido ingresado es: " + apellido);
+		
+		var dni = document.getElementById('dni').value;
+		console.log("El dni ingresado es: " + dni);
+		
+		var sexo="ninguno";
+ 
+        var opcionesSexo=document.getElementsByName("sexo");
+		
+        // Recorremos todos los valores del radio button para encontrar el seleccionado
+        for(var i=0;i<opcionesSexo.length;i++){
+            if(opcionesSexo[i].checked)
+                sexo=opcionesSexo[i].value;
+        }
+		console.log("El sexo seleccionado es: " + sexo);
+		
+		var curso = document.getElementById('curso').value;
+		console.log("El curso seleccionado es: " + curso);
+		
+		var motivo = document.getElementById('motivo').value;
+		console.log("El motivo ingresado es: " + motivo);
+	}
+</script>

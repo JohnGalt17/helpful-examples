@@ -1,0 +1,26 @@
+body{
+	/* background-color: grey */
+}
+
+#contendor{
+	width: 100%;
+}
+
+#contendorAlta{
+	float: left;
+	width: 60%;
+	height: 100%;
+}
+
+
+#resultadoAlta{
+	float: right;
+	width: 40%;
+	height: 100%;
+}
+
+.labelAlta{
+	font-size: 15px;
+	color: blue;
+	font-weight: bold;
+}
